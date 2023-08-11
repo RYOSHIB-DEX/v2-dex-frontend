@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "16.x"
+  },
   "name": "v2-dex-frontend",
   "description": "RYOSHIB-DEX Interface",
   "repository": "https://github.com/RYOSHIB-DEX/v2-dex-frontend.git",
