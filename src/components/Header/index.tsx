@@ -18,7 +18,7 @@ import { YellowCard } from '../Card'
 import Settings from '../Settings'
 import Menu from '../Menu'
 
-import /*Row*/ { RowBetween } from '../Row'
+import { /*Row*/ RowBetween } from '../Row'
 import Web3Status from '../Web3Status'
 import VersionSwitch from './VersionSwitch'
 

@@ -53,7 +53,6 @@ export const portis = new PortisConnector({
 // mainnet only
 export const walletlink = new WalletLinkConnector({
   url: NETWORK_URL,
-  appName: 'Uniswap',
-  appLogoUrl:
-    'https://mpng.pngfly.com/20181202/bex/kisspng-emoji-domain-unicorn-pin-badges-sticker-unicorn-tumblr-emoji-unicorn-iphoneemoji-5c046729264a77.5671679315437924251569.jpg'
+  appName: 'Ryoshib',
+  appLogoUrl: 'https://img1.wsimg.com/isteam/ip/4a8e9766-6115-4f84-9caf-44b97b688276/IMG_20230504_220600_603.jpg'
 })
