@@ -1,0 +1,9 @@
+{
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/node"
+        }
+    ],
+    "nodeVersion": "16.x"
+}
