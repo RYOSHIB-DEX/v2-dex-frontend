@@ -43,7 +43,7 @@ const initialState: ListsState = {
       pendingUpdate: null
     }
   },
-  selectedListUrl: undefined
+  selectedListUrl: 'default'
 }
 
 export default createReducer(initialState, builder =>
