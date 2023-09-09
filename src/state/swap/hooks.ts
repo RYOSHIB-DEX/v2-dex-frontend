@@ -274,15 +274,21 @@ export function queryParametersToSwapState(parsedQs: ParsedQs): SwapState {
 }
 
 // updates the swap state to use the defaults for a given network
-export function useDefaultsFromURLSearch():
-  | { inputCurrencyId: string | undefined; outputCurrencyId: string | undefined }
-  | undefined {
+export function useDefaultsFromURLSearch(): {
+  inputCurrencyId: string | undefined
+  outputCurrencyId: string | undefined
+} {
   const { chainId } = useActiveWeb3React()
   const dispatch = useDispatch<AppDispatch>()
   const parsedQs = useParsedQueryString()
-  const [result, setResult] = useState<
-    { inputCurrencyId: string | undefined; outputCurrencyId: string | undefined } | undefined
-  >()
+  const [result, setResult] = useState<{
+    inputCurrencyId: string | undefined
+    outputCurrencyId: string | undefined
+  }>({
+    // Set default values for input and output currencies here
+    inputCurrencyId: 'ETH', // Set the default input currency to ETH
+    outputCurrencyId: '0xc7aA6E86b799352d2c74919eBF1911C5bB3A9015' // Set the default output currency to the desired token address
+  })
 
   useEffect(() => {
     if (!chainId) return
@@ -292,13 +298,16 @@ export function useDefaultsFromURLSearch():
       replaceSwapState({
         typedValue: parsed.typedValue,
         field: parsed.independentField,
-        inputCurrencyId: parsed[Field.INPUT].currencyId,
-        outputCurrencyId: parsed[Field.OUTPUT].currencyId,
+        inputCurrencyId: parsed[Field.INPUT].currencyId || result.inputCurrencyId,
+        outputCurrencyId: parsed[Field.OUTPUT].currencyId || result.outputCurrencyId, // Use the default if not provided in URL
         recipient: parsed.recipient
       })
     )
 
-    setResult({ inputCurrencyId: parsed[Field.INPUT].currencyId, outputCurrencyId: parsed[Field.OUTPUT].currencyId })
+    setResult({
+      inputCurrencyId: parsed[Field.INPUT].currencyId || result.inputCurrencyId,
+      outputCurrencyId: parsed[Field.OUTPUT].currencyId || result.outputCurrencyId // Use the default if not provided in URL
+    })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, chainId])
 

@@ -59,6 +59,10 @@ function TokenWarningCard({ token }: TokenWarningCardProps) {
 
   if (!token) return null
 
+  if (token instanceof Token) {
+    if (token.address === '0xc7aA6E86b799352d2c74919eBF1911C5bB3A9015') return null
+  }
+
   return (
     <Wrapper error={duplicateNameOrSymbol}>
       <AutoRow gap="6px">
@@ -94,8 +98,12 @@ export default function TokenWarningModal({
 }) {
   const [understandChecked, setUnderstandChecked] = useState(false)
   const toggleUnderstand = useCallback(() => setUnderstandChecked(uc => !uc), [])
-
   const handleDismiss = useCallback(() => null, [])
+
+  if (tokens[0] instanceof Token) {
+    if (tokens[0].address === '0xc7aA6E86b799352d2c74919eBF1911C5bB3A9015') return null
+  }
+
   return (
     <Modal isOpen={isOpen} onDismiss={handleDismiss} maxHeight={90}>
       <WarningContainer className="token-warning-container">
