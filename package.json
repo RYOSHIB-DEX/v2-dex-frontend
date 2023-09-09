@@ -1,6 +1,6 @@
 {
   "name": "v2-dex-frontend",
-  "description": "RYOSHIB-DEX Interface",
+  "description": "RYOSHIB-DEX",
   "repository": "https://github.com/RYOSHIB-DEX/v2-dex-frontend.git",
   "homepage": ".",
   "private": true,
