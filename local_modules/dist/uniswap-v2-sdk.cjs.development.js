@@ -20,27 +20,27 @@ var IUniswapV2Pair = _interopDefault(require('@uniswap/v2-core/build/IUniswapV2P
 var deploymentData = {
   "4": {
     weth: {
-      proxyAddress: "0x517cB94a3e29cFf83F4230082e0209626a040D9F",
-      implAddress: "0x517cB94a3e29cFf83F4230082e0209626a040D9F",
+      proxyAddress: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      implAddress: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       version: "1.0.0",
       contract: "WETH9",
-      operator: "0x64358a8Dd8AabEb7181be9d4341AC2aD87Fd8bC2",
+      operator: "0xc5C2051B5F12868E6F644a0b2cc6e893b3AFC082",
       fromBlock: 10108203
     },
     factory: {
-      proxyAddress: "0xDc452a29B570EE4dA3B809Ae85DD2c7c0a692fea",
-      implAddress: "0xDc452a29B570EE4dA3B809Ae85DD2c7c0a692fea",
+      proxyAddress: "0x7ad8e9413422CF46B510D1E1B7D34B433646788F",
+      implAddress: "0x7ad8e9413422CF46B510D1E1B7D34B433646788F",
       version: "1.0.0",
       contract: "UniswapV2Factory",
-      operator: "0x64358a8Dd8AabEb7181be9d4341AC2aD87Fd8bC2",
+      operator: "0xc5C2051B5F12868E6F644a0b2cc6e893b3AFC082",
       fromBlock: 10108204
     },
     router: {
-      proxyAddress: "0x4F71dE299c6c0b3dd9b74E58feB170F5ffa3e71a",
-      implAddress: "0x4F71dE299c6c0b3dd9b74E58feB170F5ffa3e71a",
+      proxyAddress: "0xAf426c4cF1A91Cc56de2cAC48Fe589f34636a28A",
+      implAddress: "0xAf426c4cF1A91Cc56de2cAC48Fe589f34636a28A",
       version: "1.0.0",
       contract: "UniswapV2Router02",
-      operator: "0x64358a8Dd8AabEb7181be9d4341AC2aD87Fd8bC2",
+      operator: "0xc5C2051B5F12868E6F644a0b2cc6e893b3AFC082",
       fromBlock: 10108205
     }
   }
@@ -70,7 +70,7 @@ var _SOLIDITY_TYPE_MAXIMA;
 })(exports.Rounding || (exports.Rounding = {}));
 
 var FACTORY_ADDRESS = DeploymentInfo[exports.ChainId.RINKEBY].factory.proxyAddress;
-var INIT_CODE_HASH = '0x2c782d3edaad096c395038919c9cfc74871192ea9b5636ff2f1432c13670e375';
+var INIT_CODE_HASH = '0xc2798df0c65b0b36a4176642c18a631e84425328fa4639917e763278a1bfd164';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);

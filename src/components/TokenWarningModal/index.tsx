@@ -60,7 +60,7 @@ function TokenWarningCard({ token }: TokenWarningCardProps) {
   if (!token) return null
 
   if (token instanceof Token) {
-    if (token.address === '0xc7aA6E86b799352d2c74919eBF1911C5bB3A9015') return null
+    if (token.address === '0xD99749C736b67e6BFA3f5340Ff03AE3806A14a49') return null
   }
 
   return (
@@ -101,7 +101,7 @@ export default function TokenWarningModal({
   const handleDismiss = useCallback(() => null, [])
 
   if (tokens[0] instanceof Token) {
-    if (tokens[0].address === '0xc7aA6E86b799352d2c74919eBF1911C5bB3A9015') return null
+    if (tokens[0].address === '0xD99749C736b67e6BFA3f5340Ff03AE3806A14a49') return null
   }
 
   return (

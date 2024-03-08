@@ -49,7 +49,7 @@ export default function CurrencyLogo({
   if (currency === ETHER) {
     return <StyledEthereumLogo src={EthereumLogo} size={size} style={style} />
   } else if (currency instanceof Token) {
-    if (currency?.address === '0xc7aA6E86b799352d2c74919eBF1911C5bB3A9015')
+    if (currency?.address === '0xD99749C736b67e6BFA3f5340Ff03AE3806A14a49')
       return <StyledEthereumLogo src={ROILogo} size={size} style={style} />
   }
 
